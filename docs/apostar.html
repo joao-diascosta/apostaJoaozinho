@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/detalhe_jogo.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="assets/js/semantic.min.js"></script>
+</head>
+
+<body>
+    <div id="header"></div>
+    <div class="ui container" style="margin-top: 60px;margin-bottom: 60px;">
+        <div class="ui large header">Registrar uma aposta</div>
+        <p>Preencha os campos com os resultados desejados e a quantidade de apostas</p>
+
+        <div class="placar">
+            <div class="bandeiras">
+                <div class="time">
+                    <img class="ui tiny image" id="imagem_card_casa" src="./assets/images/Felipe.png">
+                    <div class="nome_time">
+                        Felipe Vereador
+                    </div>
+                </div>
+                <form action="" style="margin-left: -185px;">
+                    <div style="margin-left: 160px; margin-top: 65px; font-size: 42px;">
+                        <div class="ui input" style="font-size: 20px; margin-right: 14px;">
+                            <input type="radio" name="radio" style="width: 26px; margin-left: 4px;">
+                            <label for="html">Felipe Wins</label><br>
+                        </div>
+                        <span>X</span>
+                        <div class="ui input" style="font-size: 20px; margin-left: 14px;">
+                            <label for="html">Ruben Wins</label><br>
+                            <input type="radio" name="radio" style="width: 26px; margin-left: 4px;">
+                        </div>
+                    </div>
+                    <div class="versus" style="margin-left: 157px; font-size: 24px;">
+                        <label for="html">Empate</label><br>
+                        <div class="ui input" style="font-size: 20px;">
+                            <input type="radio" name="radio" style="width: 25px; margin-left: 4px; margin-top: -16px;">
+                        </div>    
+                    </div>
+                </form>
+                <div class="time">
+                    <img class="ui tiny image" id="imagem_card_casa" src="./assets/images/Ruben.png">
+                    <div class="nome_time">
+                        Pai do Felipe
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="quantidade-aposta-container">
+            <p>Apostar</p>
+            <div class="ui input">
+                <input type="number" id="quantidade-apostas" value="1">
+            </div>
+            <div class="resultado-calculo">
+                <div class="valor">
+                    x R$ 10,00
+                </div>
+                <div class="total">
+                    TOTAL: R$ <span>10,00</span>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="detalhe_jogo_logado.html" class="positive ui button">Registar Aposta</a>
+        </div>
+
+    </div>
+
+    <script src="assets/js/script.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            Script.start('on');
+            $("#quantidade-apostas").keyup(function () {
+                let qnt = $(this).val();
+                if (qnt < 0) {
+                    $(this).val(1);
+                } else {
+                    let total = qnt * 15;
+
+                    $(".total").find("span").html(total.toFixed(2));
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

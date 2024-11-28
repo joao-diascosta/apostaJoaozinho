@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- <title>Aposte Já</title> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/semantic.min.css">
+    <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    <script src="assets/js/semantic.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/cadastroStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji" rel="stylesheet"> 
+</head>
+<body>
+  <div id="header"></div>
+  <div class="ui middle aligned center aligned grid">
+      <div class="column">
+        <h2 class="ui image header">
+          <div class="content">
+           Faça o seu cadastro agora!
+          </div>
+        </h2>
+        <form class="ui large form">
+          <div class="ui stacked secondary  segment">
+            <div class="field">
+              <div class="ui left icon input">
+                <i class="envelope icon"></i>
+                <input type="text" name="email" placeholder="E-mail" value="jose@gmail.com">
+              </div>
+            </div>
+            <div class="field">
+                <div class="ui left icon input">
+                  <i class="user icon"></i>
+                  <input type="text" name="usuario" placeholder="Nome" value="José Abreu">
+                </div>
+              </div>
+            <div class="field">
+              <div class="ui left icon input">
+                <i class="lock icon"></i>
+                <input type="password" name="password" placeholder="Senha" value="12345678">
+              </div>
+            </div>
+            <div class="field">
+                <div class="ui left icon input">
+                  <i class="lock icon"></i>
+                  <input type="password" name="password" placeholder="Confirme a senha" value="12345678">
+                </div>
+              </div>
+            <div class="ui checkbox">
+               <input type="checkbox" name="checkbox" checked>
+                  <label>Li e aceito os termos de compromisso</label>
+            </div>
+            <a href="login.html" style="margin-top: 15px;" class="ui fluid large green submit button">Cadastrar</a>
+             <div>Já possui uma conta?</div>
+          <div><a href="login.html">Clique aqui</a> e faça o login</div>
+          </div>
+        </form>
+      </div>
+    </div>
+ 
+
+<script src="assets/js/script.js"></script>
+<script type="text/javascript">
+  $('.ui.toggle.checkbox').checkbox();
+
+  $(document).ready(function(){
+    Script.start('off');
+  });
+</script>
+</body>
+</html>
