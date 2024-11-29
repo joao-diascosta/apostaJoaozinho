@@ -10,6 +10,7 @@ const Script = {
     LOGIN_PAGE: 'login.html',
     REGISTER_PAGE: 'cadastro.html',
     APOSTAS_PAGE: 'apostas.html',
+    RESULTADOS_PAGE: 'resultados.html',
     CONTA_PAGE: 'minhaconta.html',
 
     _loadTemplates: function _loadTemplates(){
@@ -25,6 +26,7 @@ const Script = {
         '<div class="ui green three inverted menu" id="top-menu">' +
             '<a href="index_logado.html" class="item">Aposte Já</a>' +
             '<div class="right menu">' +
+                '<a href="' + Script.RESULTADOS_PAGE + '" class="item">Resultados</a>' +
                 '<a href="' + Script.APOSTAS_PAGE + '" class="item">Apostas</a>' +
                 '<a href="' + Script.CONTA_PAGE + '" class="item">Conta</a>' + 
                 '<a href="index.html" class="item">Sair</a>' + 
